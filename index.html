@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="description" content="Davlatlar, poytaxtlar va bayroqlar bo‘yicha bilimlaringizni sinab ko‘ring.">
+  <title>Bilim sayohati — davlatlar testi</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Bilim sayohati bosh sahifa">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span>bilim<span class="brand-light">sayohati</span></span>
+    </a>
+    <nav class="topnav" aria-label="Asosiy menyu">
+      <a class="nav-link active" href="#test">Test</a>
+      <a class="nav-link" href="#qitalar">Qitolar</a>
+      <a class="nav-link" href="#qollanma">Qo‘llanma</a>
+    </nav>
+    <a class="top-cta" href="#test">Testni boshlash <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> BILIMINGIZNI SINAB KO‘RING</div>
+        <h1>Dunyoni bilish<br>— <span>sayohatdan</span> boshlanadi.</h1>
+        <p>Davlatlar, poytaxtlar va bayroqlarni qiziqarli testlar orqali o‘rganing. Har bir savol — yangi kashfiyot.</p>
+        <a class="primary-button" href="#test">Testga o‘tish <span aria-hidden="true">↓</span></a>
+        <div class="hero-proof"><span class="proof-avatars" aria-hidden="true"><i>🌍</i><i>🧭</i><i>✈️</i></span><span>Qiziqarli savollar bilan bilimingizni oshiring</span></div>
+      </div>
+      <div class="hero-art" aria-label="Dunyo bo‘ylab sayohat">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="globe">🌐</div>
+        <div class="float-card float-top"><span class="float-icon">🏳️</span><span><b>Bayroqlar</b><small>Dunyo ranglari</small></span></div>
+        <div class="float-card float-bottom"><span class="float-icon">📍</span><span><b>195+ davlat</b><small>Bir dunyo, ko‘p bilim</small></span></div>
+        <span class="star star-one">✦</span><span class="star star-two">✦</span>
+      </div>
+      <div class="hero-stats">
+        <div><strong>5</strong><span>qit’a</span></div>
+        <div><strong>195<span>+</span></strong><span>davlat</span></div>
+        <div><strong>∞</strong><span>kashfiyot</span></div>
+      </div>
+    </section>
+
+    <section class="quiz-section" id="test">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-dot"></span> O‘YIN VA O‘RGANISH</div><h2>Bilimingizni sinab ko‘ring</h2></div>
+        <p>Qit’ani tanlang, savollarga javob bering<br>va natijangizni ko‘ring.</p>
+      </div>
+
+      <div class="quiz-layout">
+        <aside class="setup-card" id="setup">
+          <div class="card-title"><span class="title-icon">✳</span><div><h3>Test sozlamalari</h3><p>O‘zingizga mos testni tanlang</p></div></div>
+          <label for="continent">Qaysi qit’a?</label>
+          <select id="continent">
+            <option value="all">Barcha qit’alar</option>
+            <option value="europe">Yevropa</option>
+            <option value="asia">Osiyo</option>
+            <option value="africa">Afrika</option>
+            <option value="americas">Amerika</option>
+            <option value="oceania">Okeaniya</option>
+          </select>
+          <label for="topic">Nimani mashq qilamiz?</label>
+          <select id="topic">
+            <option value="mixed">Aralash savollar</option>
+            <option value="capital">Poytaxtlar</option>
+            <option value="flag">Bayroqlar</option>
+            <option value="country">Davlatlar va poytaxtlar</option>
+          </select>
+          <label>Savollar soni</label>
+          <div class="count-options" role="group" aria-label="Savollar soni">
+            <button type="button" class="count-option" data-count="5">5</button>
+            <button type="button" class="count-option selected" data-count="10">10</button>
+            <button type="button" class="count-option" data-count="15">15</button>
+          </div>
+          <button type="button" class="primary-button start-button" id="start-quiz">Testni boshlash <span aria-hidden="true">→</span></button>
+          <div class="setup-note"><span>💡</span> Har savolda 4 ta javobdan birini tanlang.</div>
+        </aside>
+
+        <div class="question-card" id="question-card">
+          <div class="quiz-empty" id="quiz-empty">
+            <div class="empty-illustration" aria-hidden="true"><span>🌍</span><i>✦</i></div>
+            <h3>Sarguzashtga tayyormisiz?</h3>
+            <p>Chap tomondan test sozlamalarini tanlab, boshlash tugmasini bosing.</p>
+            <div class="empty-tags"><span>🧠 Bilim</span><span>🏁 Natija</span><span>🌎 Sayohat</span></div>
+          </div>
+          <div class="quiz-active hidden" id="quiz-active">
+            <div class="question-top"><span class="question-label" id="question-label">SAVOL 1 / 10</span><span class="question-topic" id="question-topic">ARALASH</span></div>
+            <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+            <div class="question-content">
+              <div class="question-flag" id="question-flag" aria-hidden="true"></div>
+              <h3 id="question-text"></h3>
+              <p id="question-hint">To‘g‘ri javobni tanlang</p>
+            </div>
+            <div class="answers" id="answers"></div>
+            <div class="question-footer"><span id="feedback" aria-live="polite"></span><button type="button" class="next-button" id="next-question" disabled>Keyingi savol <span aria-hidden="true">→</span></button></div>
+          </div>
+          <div class="quiz-result hidden" id="quiz-result" aria-live="polite">
+            <div class="result-medal" id="result-medal">🏆</div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span> TEST YAKUNLANDI</div>
+            <h3 id="result-title">Ajoyib natija!</h3>
+            <p id="result-message"></p>
+            <div class="score-display"><strong id="score">0</strong><span id="score-total">/ 10</span></div>
+            <div class="result-actions"><button type="button" class="primary-button" id="retry-quiz">Yana bir bor <span aria-hidden="true">↻</span></button><button type="button" class="text-button" id="change-settings">Sozlamalarni o‘zgartirish</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="continents-section" id="qitalar">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-dot"></span> DUNYO XARITASI</div><h2>Qaysi tomonga yo‘l olamiz?</h2></div>
+        <p>Qit’ani tanlang va o‘sha hudud haqidagi<br>bilimlaringizni mustahkamlang.</p>
+      </div>
+      <div class="continent-grid">
+        <button class="continent-card europe" data-continent="europe"><span class="continent-emoji">🏰</span><span><b>Yevropa</b><small>Madaniyatlar chorrahasi</small></span><span class="continent-arrow">↗</span></button>
+        <button class="continent-card asia" data-continent="asia"><span class="continent-emoji">⛩️</span><span><b>Osiyo</b><small>Qadimiy va zamonaviy</small></span><span class="continent-arrow">↗</span></button>
+        <button class="continent-card africa" data-continent="africa"><span class="continent-emoji">🦁</span><span><b>Afrika</b><small>Tabiat va xilma-xillik</small></span><span class="continent-arrow">↗</span></button>
+        <button class="continent-card americas" data-continent="americas"><span class="continent-emoji">🗽</span><span><b>Amerika</b><small>Ikki qit’a, ko‘p kashfiyot</small></span><span class="continent-arrow">↗</span></button>
+        <button class="continent-card oceania" data-continent="oceania"><span class="continent-emoji">🏝️</span><span><b>Okeaniya</b><small>Orollar va okeanlar</small></span><span class="continent-arrow">↗</span></button>
+      </div>
+    </section>
+
+    <section class="guide-section" id="qollanma">
+      <div class="guide-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> O‘RGANISH UCHUN</div><h2>Ko‘rib o‘rganing,<br>esda saqlab qoling.</h2><p>Qit’alar bo‘yicha davlatlar va poytaxtlar jadvalini ochib, testdan oldin bilimlaringizni takrorlang.</p></div>
+      <div class="study-list">
+        <button class="study-item" data-sheet="yevropa.png"><span class="study-icon">🏰</span><span><b>Yevropa</b><small>44 ta davlat</small></span><span class="study-arrow">↗</span></button>
+        <button class="study-item" data-sheet="osiyo.png"><span class="study-icon">⛩️</span><span><b>Osiyo</b><small>49 ta davlat</small></span><span class="study-arrow">↗</span></button>
+        <button class="study-item" data-sheet="Afriqa.png"><span class="study-icon">🦁</span><span><b>Afrika</b><small>54 ta davlat</small></span><span class="study-arrow">↗</span></button>
+        <button class="study-item" data-sheet="Shimoli va janubi Amereqa.png"><span class="study-icon">🌎</span><span><b>Amerika</b><small>35 ta davlat</small></span><span class="study-arrow">↗</span></button>
+        <button class="study-item" data-sheet="okeaniya.png"><span class="study-icon">🏝️</span><span><b>Okeaniya</b><small>14 ta davlat</small></span><span class="study-arrow">↗</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#"><span class="brand-mark">✦</span><span>bilim<span class="brand-light">sayohati</span></span></a><span>Bilim bilan dunyo yanada yaqin.</span><a href="#test">Testga qaytish ↑</a></footer>
+
+  <dialog class="sheet-dialog" id="sheet-dialog">
+    <div class="dialog-top"><div><span class="eyebrow"><span class="eyebrow-dot"></span> O‘RGANISH MATERIALLARI</span><h2 id="sheet-title">Qit’a jadvali</h2></div><button type="button" class="close-dialog" aria-label="Yopish">×</button></div>
+    <div class="sheet-image-wrap"><img id="sheet-image" alt="Qit’adagi davlatlar va poytaxtlar jadvali"></div>
+  </dialog>
+</body>
+</html>
